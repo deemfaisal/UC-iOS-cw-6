@@ -37,24 +37,25 @@ struct ContentView: View {
             Image("stud")
                 .resizable()
                 .frame(width: 150, height: 100, alignment: .top)
-            
-            
-            
+
+
+
             Text("Students Records")
                 .font(.largeTitle)
                 .bold()
                 .padding()
             
             
-            List {
+            List() {
                 ForEach(Students) {
                     student in
 
-                    VStack {
+                    VStack(alignment:.leading) {
                         
-                        Text("Name:\(student.name)")
+                        Text("Name: \(student.name)")
                             .font(.system(size: 20))
-                            .padding()
+                            .bold()
+                            //.padding()
                         
                         Text("Year: \(student.year)")
                             .font(.system(size: 20))
@@ -62,18 +63,10 @@ struct ContentView: View {
                         
                         Text("Age: \(student.age)")
                             .font(.system(size: 20))
-                            .padding()
-                           
-                        
-                        
-                        
+                            //.padding()
+
                             
-                        }
-                    
-                    
-                    
-                    
-                        
+                    }.padding()
                   
                     }
                     
@@ -88,6 +81,7 @@ struct ContentView: View {
                 Text("No. of Registered Students: 3")
                     .font(.system(size: 23))
                     .bold()
+                    
                 
                 
                 
